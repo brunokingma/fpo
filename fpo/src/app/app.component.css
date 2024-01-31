@@ -228,9 +228,22 @@ html {
 
 }
 
+.lista{
+    list-style: none;
+    color: white;
+    margin-top: 10px;
+    padding: 0;
+}
+
 .linha {
     background: #4bbfab;
     height: 12px;
+}
+
+.btn-cor{
+    background: #4bbfab;
+    border-color: #3b8f81;
+    margin-top: 20px;
 }
 
 
@@ -343,6 +356,7 @@ height: 250px;
     height: 30px;
     text-align: center;
     vertical-align: middle;
+    margin-right: 5px;
 }
 
 

@@ -1,4 +1,25 @@
 <div class="container-fluid">
+
+  <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Proteção de dados</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="row mb-2 justify-content-center text-center">
     <div class="politica" (click)="popPolitica()">
       <i class="bi bi-shield-lock-fill"></i> A Arcoverde preocupa-se com a proteção dos seus dados
@@ -20,12 +41,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-0 mt-3">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">A ARCOVERDE</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">SOLUÇÕES</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">BENEFÍCIOS</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">CLIENTES</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">BLOG</a></li>
-                <li class="nav-item bgnav"><a href="#" class="nav-link">LOGIN</a></li>
+                <li class="nav-item"><a href="#ARCOVERDE" class="nav-link active" aria-current="page">A ARCOVERDE</a>
+                </li>
+                <li class="nav-item"><a href="#SOLUCOES" class="nav-link">SOLUÇÕES</a></li>
+                <li class="nav-item"><a href="#BENEFICIOS" class="nav-link">BENEFÍCIOS</a></li>
+                <li class="nav-item"><a href="#CLIENTES" class="nav-link">CLIENTES</a></li>
+                <li class="nav-item bgnav"><a href="#CONTATO" class="nav-link">CONTATO</a></li>
               </ul>
             </div>
           </nav>
@@ -221,7 +242,8 @@
     </div>
   </div>
 </section>
-<!-- App badge section-->
+
+
 <section class="" id="download">
   <div class="container px-5">
 
@@ -236,19 +258,39 @@
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                   <div class="col-md-3">
-                      <div class=" clientesItem">
-                        <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
-                      </div>
+                    <div class=" clientesItem">
+                      <img src="../assets/img/l01.png" class="img-fluid">
+                    </div>
                   </div>
                 </div>
                 <div class="carousel-item ">
                   <div class="col-md-3">
-                      <div class="clientesItem">
-                        <img src="//via.placeholder.com/500x400/e66?text=2" class="img-fluid">
-                      </div>
+                    <div class="clientesItem">
+                      <img src="../assets/img/l02.png" class="img-fluid">
                     </div>
                   </div>
-                
+                </div>
+                <div class="carousel-item ">
+                  <div class="col-md-3">
+                    <div class="clientesItem">
+                      <img src="../assets/img/l03.png" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="col-md-3">
+                    <div class="clientesItem">
+                      <img src="../assets/img/l04.png" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="col-md-3">
+                    <div class="clientesItem">
+                      <img src="../assets/img/l05.png" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
               </div>
               <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
                 data-bs-slide="prev">
@@ -260,61 +302,6 @@
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row gx-5 align-items-center justify-content-center ">
-      <div class="col-10 clientes mb-4">
-        <h3 class="texto mb-4">CLIENTES</h3>
-
-        <div class="container text-center my-3 ">
-          <div class="row mx-auto my-auto justify-content-center">
-            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                  <div class="col-md-3">
-                      <div class=" clientesItem">
-                        <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
-                      </div>
-                  </div>
-                </div>
-                <div class="carousel-item ">
-                  <div class="col-md-3">
-                      <div class="clientesItem">
-                        <img src="//via.placeholder.com/500x400/e66?text=2" class="img-fluid">
-                      </div>
-                    </div>
-                  </div>
-                
-              </div>
-              <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              </a>
-              <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-
-    <div class="row gx-5 align-items-center justify-content-center mt-4">
-
-      <div class="col-10 newsletter">
-        <div class="mr-2">Cadastre-se para receber nossa newsletter</div>
-        <div><input type="text" name="newsletter" id="newsletter" class="inputnews" /></div>
-        <div><button class="btn btn-sm btn-primary botaonews">CADASTRAR</button></div>
-        <div class="ml-5 containerItens">
-          <div class="medias mr-2"><i class="bi bi-instagram"></i></div>
-          <div class="medias mr-2"><i class="bi bi-facebook"></i></div>
-          <div class="medias mr-2"><i class="bi bi-linkedin"></i></div>
         </div>
       </div>
     </div>
@@ -322,10 +309,90 @@
 
 
 
+  <section class="bg2">
+    <div class="container px-5  ">
+      <div class="row gx-5 align-items-center justify-content-center ">
+        <div class="col-lg-10">
+          <h3 class="titulo3 mb-4" id="CONTATO">CONTATO</h3>
+
+          <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="error">
+            <strong>Atenção!</strong> {{errorMessage}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+
+          <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="success">
+            <strong>Atenção!</strong> Mensagem enviada com sucesso.
+          </div>
+
+
+          <form [formGroup]="mailForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col">
+                <div class="form-group mb-3">
+                  <label for="nome" class="mb-1" style="color: white;">*Nome</label>
+                  <input type="text" class="form-control" id="nome" formControlName="nome"
+                    placeholder="Digite o seu nome" required />
+                  <div *ngIf="mailForm.get('nome')?.errors?.['required'] && mailForm.get('nome')?.touched">
+                    <div class="text-danger">Nome é obrigatório</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group mb-3">
+                  <label for="email" class="mb-1" style="color: white;">*Email</label>
+                  <input type="email" class="form-control" id="email" formControlName="email"
+                    placeholder="Digite o seu email" required />
+                  <div *ngIf="mailForm.get('email')?.errors?.['required'] && mailForm.get('email')?.touched">
+                    <div class="text-danger">Email é obrigatório</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="assunto" class="mb-1" style="color: white;">*Assunto</label>
+              <input type="text" class="form-control" id="assunto" formControlName="assunto"
+                placeholder="Digite o assunto" required />
+              <div *ngIf="mailForm.get('assunto')?.errors?.['required'] && mailForm.get('assunto')?.touched">
+                <div class="text-danger">Assunto é obrigatório</div>
+              </div>
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="mensagem" class="mb-1" style="color: white;">*Mensagem</label>
+              <textarea class="form-control" id="mensagem" rows="4" formControlName="assunto"
+                placeholder="Digite a sua mensagem" required></textarea>
+            </div>
+            <small style="color: white;">* Campos obrigatórios</small>
+            <div>
+              <ul class="lista">
+                <li><i class="bi bi-envelope-at-fill"></i> <b> Email: </b><a
+                    href="mailto:contato@arcoverdeconsultoria.com.br" style="color: #4bbfab;">
+                    contato&#64;arcoverdeconsultoria.com.br</a></li>
+                <li><i class="bi bi-telephone-fill"></i> <b> Telefone:</b> 32 99175.1161 </li>
+              </ul>
+            </div>
+            <button type="submit" class="btn btn-primary btn-cor float-end"><i class="bi bi-send"></i> Enviar </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 </section>
 <!-- Footer-->
 <footer class=" text-center">
-  <div class="container px-5">
+  <div class="container">
+    <div class="row">
+      <div class=" containerItens mb-4 justify-content-center ">
+        <div class="medias"><i class="bi bi-instagram"></i></div>
+        <div class="medias "><i class="bi bi-facebook"></i></div>
+        <div class="medias"><i class="bi bi-linkedin"></i></div>
+      </div>
+    </div>
     <div class="rodape">
       <div class=" small">
         <div class="mb-2">&copy; FPO+ - EMPRESA DO GRUPO ARCOVERDE SOLUÇÕES - TODOS OS DIREITOS RESERVADOS.</div>

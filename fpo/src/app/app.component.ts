@@ -1,26 +1,63 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 declare var bootstrap: any; // Declare the Bootstrap variable
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, ReactiveFormsModule, HttpClientModule ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
+  
+  
+  constructor(private http: HttpClient, private formBuilder: FormBuilder) { }
+  
+  
+  title = 'Arcoverde Soluções e Negócios';
+  error:boolean = false;
+  success:boolean = false;
+  mailForm!: FormGroup;
+  errorMessage: string = "";
+  
 
+  
   popPolitica() {
     throw new Error('Method not implemented.');
   }
 
-  title = 'fpo';
+  onSubmit(): void {
+    if (this.mailForm.valid) {
+      this.http.post('mail.php', this.mailForm.value)
+        .subscribe(
+          (response) => {
+this.success = true;
+            this.mailForm.reset();
+          },
+          (error) => {
+this.error = true;
+this.errorMessage = error;
+          }
+        );
+    } else {
+      console.log("Formulário inválido. Verifique os campos.");
+    }
+  }
+
   ngOnInit() {
     this.initializeCarousel();
     this.initializeScrollSpy();
     this.setupResponsiveNavToggler();
+    this.mailForm = this.formBuilder.group({
+      nome: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      assunto: ['', Validators.required],
+      mensagem: ['', Validators.required]
+    });
   }
   private initializeCarousel() {
     let items = document.querySelectorAll('.carousel .carousel-item')
