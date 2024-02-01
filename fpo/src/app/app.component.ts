@@ -8,26 +8,36 @@ declare var bootstrap: any; // Declare the Bootstrap variable
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ReactiveFormsModule, HttpClientModule ],
+  imports: [CommonModule, RouterOutlet, ReactiveFormsModule, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  
-  
+
+
   constructor(private http: HttpClient, private formBuilder: FormBuilder) { }
-  
-  
+
+
   title = 'Arcoverde Soluções e Negócios';
-  error:boolean = false;
-  success:boolean = false;
+  error: boolean = false;
+  success: boolean = false;
   mailForm!: FormGroup;
   errorMessage: string = "";
-  
 
-  
+
+  closeModal() {
+    const modal = document.getElementById("modal");
+    if (modal) {
+      modal.style.display = "none";
+    }  }
+
+
+
   popPolitica() {
-    throw new Error('Method not implemented.');
+    const modal = document.getElementById("modal");
+    if (modal) {
+      modal.style.display = "block";
+    }
   }
 
   onSubmit(): void {
@@ -35,12 +45,12 @@ export class AppComponent implements OnInit {
       this.http.post('mail.php', this.mailForm.value)
         .subscribe(
           (response) => {
-this.success = true;
+            this.success = true;
             this.mailForm.reset();
           },
           (error) => {
-this.error = true;
-this.errorMessage = error;
+            this.error = true;
+            this.errorMessage = error;
           }
         );
     } else {
