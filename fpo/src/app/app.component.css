@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: 'Montserrat';
     src: url('../assets/fonts/Montserrat-Regular.ttf');
@@ -162,6 +164,7 @@ html {
 .navbar-toggler {
     color: #fff;
     border-color: #fff;
+    margin-left: 80px;
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -310,6 +313,7 @@ html {
     padding-top: 10px;
     color: #fff;
     font-weight: 400;
+    padding-left: 15px;
 }
 
 
@@ -395,6 +399,22 @@ html {
     .carousel-inner .carousel-item>div:first-child {
         display: block;
     }
+
+    .carousel-inner {
+        margin-left: 0px;
+    }
+    .rodape{
+        height: 60px;
+        padding-top: 15px;
+        font-size: 12px;
+    }
+    .bgRoxo {
+        padding: 4px 8px 4px 10px;
+    }
+    section.cta {
+        background-size: cover;
+    }
+
 }
 
 .carousel-inner .carousel-item.active,

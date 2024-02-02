@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 declare var bootstrap: any; // Declare the Bootstrap variable
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ export class AppComponent implements OnInit {
   success: boolean = false;
   mailForm!: FormGroup;
   errorMessage: string = "";
+  errorMessagePadrao: string = "Todos os campos são Obrigatórios";
 
 
   closeModal() {
@@ -50,11 +52,12 @@ export class AppComponent implements OnInit {
           },
           (error) => {
             this.error = true;
-            this.errorMessage = error;
+            this.errorMessage = error.message;
           }
         );
     } else {
-      console.log("Formulário inválido. Verifique os campos.");
+      this.error = true;
+      this.errorMessage = this.errorMessagePadrao;
     }
   }
 

@@ -164,7 +164,7 @@
 
             </div>
             <div class="col-md-4 align-items-center justify-content-center centered-img">
-              <img src="../assets/img/fpomais.png" width="400" />
+              <img src="../assets/img/fpomais.png" width="100%" />
             </div>
           </div>
         </div>
@@ -359,16 +359,15 @@
         <div class="col-lg-10">
           <h3 class="titulo3 mb-4" id="CONTATO">CONTATO</h3>
 
-          <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="error">
+          <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="error">
             <strong>Atenção!</strong> {{errorMessage}}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
 
 
           <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="success">
             <strong>Atenção!</strong> Mensagem enviada com sucesso.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
 
 
@@ -415,7 +414,7 @@
 
             <div class="form-group mb-2">
               <label for="mensagem" class="mb-1" style="color: white;">*Mensagem</label>
-              <textarea class="form-control" id="mensagem" rows="4" formControlName="assunto"
+              <textarea class="form-control" id="mensagem" rows="4" formControlName="mensagem"
                 placeholder="Digite a sua mensagem" required></textarea>
             </div>
             <small style="color: white;">* Campos obrigatórios</small>
@@ -430,7 +429,7 @@
 
 </section>
 <!-- Footer-->
-<footer class=" text-center">
+<footer class="text-center">
   <div class="container">
     <div class="row">
       <div class=" containerItens mb-4 justify-content-center ">
