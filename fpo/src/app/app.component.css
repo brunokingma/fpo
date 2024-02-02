@@ -182,10 +182,10 @@ html {
         position: absolute;
         top: 56px;
         /* Adjust the top position as needed */
-        left: -30px;
+         left: 45px; 
         right: 0;
-        width: 120px;
-        z-index: 1000;
+        width: 150px;
+        z-index: 10000;
         padding-top: 5px;
         /* Adjust the top padding as needed */
         background-color: rgba(86, 37, 132, 0.8);
