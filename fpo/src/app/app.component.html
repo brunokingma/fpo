@@ -70,7 +70,7 @@
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="home col-md-8 col-sm-11">
+    <div class="home col-md-11 col-sm-12">
       <div class="col-12">
         <!-- Navigation-->
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 ">
@@ -225,7 +225,6 @@
           </div>
         </div>
         <div>
-
         </div>
       </div>
     </div>
@@ -340,6 +339,22 @@
                     </div>
                   </div>
                 </div>
+                <div class="carousel-item ">
+                  <div class="col-md-3">
+                    <div class="clientesItem">
+                      <img src="../assets/img/l06.png" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item ">
+                  <div class="col-md-3">
+                    <div class="clientesItem">
+                      <img src="../assets/img/l07.png" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+
               </div>
               <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button"
                 data-bs-slide="prev">
@@ -365,13 +380,13 @@
           <h3 class="titulo3 mb-4" id="CONTATO">CONTATO</h3>
 
           <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="error">
-            <strong>Atenção!</strong> {{errorMessage}}
+            <strong>Atenção!</strong> {{message}}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
 
 
           <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="success">
-            <strong>Atenção!</strong> Mensagem enviada com sucesso.
+            <strong>Atenção!</strong>  {{message}}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
 
@@ -438,9 +453,9 @@
   <div class="container">
     <div class="row">
       <div class=" containerItens mb-4 justify-content-center ">
-        <div class="medias"><i class="bi bi-instagram"></i></div>
-        <div class="medias "><i class="bi bi-facebook"></i></div>
-        <div class="medias"><i class="bi bi-linkedin"></i></div>
+        <div class="medias"><a href="https://www.instagram.com/arcoverdeconsultoria?igsh=MTBraWl0amdxY29nNA%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a></div>
+        <div class="medias "><a href="https://www.facebook.com/share/sbUUqCJu1BKCodFQ/?mibextid=WC7FNe"><i class="bi bi-facebook"></i></a></div>
+        <div class="medias"><a href="https://www.linkedin.com/company/arcoverde-consultoria-solu%C3%A7%C3%B5es-em-neg%C3%B3cios/" ><i class="bi bi-linkedin"></i></a></div>
       </div>
     </div>
     <div class="rodape">

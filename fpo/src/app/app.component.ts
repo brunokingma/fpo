@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+
+import { Subscription } from 'rxjs';
 declare var bootstrap: any; // Declare the Bootstrap variable
 import * as $ from 'jquery';
 
@@ -23,7 +25,7 @@ export class AppComponent implements OnInit {
   error: boolean = false;
   success: boolean = false;
   mailForm!: FormGroup;
-  errorMessage: string = "";
+  message: string = "";
   errorMessagePadrao: string = "Todos os campos são Obrigatórios";
 
 
@@ -31,7 +33,8 @@ export class AppComponent implements OnInit {
     const modal = document.getElementById("modal");
     if (modal) {
       modal.style.display = "none";
-    }  }
+    }
+  }
 
 
 
@@ -45,19 +48,23 @@ export class AppComponent implements OnInit {
   onSubmit(): void {
     if (this.mailForm.valid) {
       this.http.post('mail.php', this.mailForm.value)
-        .subscribe(
-          (response) => {
+      .subscribe({
+        next: (response: any) => { 
+          if (response.success) {
+            this.message = response.message; 
             this.success = true;
             this.mailForm.reset();
-          },
-          (error) => {
+          } else {
             this.error = true;
-            this.errorMessage = error.message;
+            this.message = response.message + '-' + response.details ; 
           }
-        );
-    } else {
-      this.error = true;
-      this.errorMessage = this.errorMessagePadrao;
+        },
+        error: (error) => {
+          console.error(error);
+          this.error = true;
+          this.message = 'An error occurred during the request.'; 
+        }
+      });
     }
   }
 

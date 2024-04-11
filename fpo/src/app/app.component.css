@@ -11,7 +11,7 @@
     background: url("../assets/img/banner.png") #562584;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
 }
 
 .bg2 {
@@ -60,14 +60,14 @@ html {
 
 
 .banner2 {
-    margin-top: 100px;
-    margin-left: 250px;
+    margin-top: 150px;
+    margin-left: 450px;
 
 }
 
 .whatsapp {
     margin-top: 300px;
-    margin-left: 150px;
+    margin-left: 50px;
     text-align: center;
     padding-top: 180px;
 }
@@ -75,9 +75,15 @@ html {
 @media (max-width: 1700px) {
     .whatsapp {
         margin-top: 300px;
-        margin-left: 50px;
+        margin-left: 0px;
         text-align: center;
         padding-top: 180px;
+    }
+
+    .banner2 {
+        margin-top: 150px;
+        margin-left: 350px;
+    
     }
 
 }
@@ -101,8 +107,11 @@ html {
 
 @media (max-width: 1460px) {
     .whatsapp {
-        display: none;
-    }
+        margin-top: 300px;
+        margin-left: 50px;
+        text-align: center;
+        padding-top: 180px;
+    }    
 
     .banner2 {
         margin-top: 100px;
@@ -145,7 +154,10 @@ html {
     }
 
     .whatsapp {
-        display: none;
+        margin-top: 160px;
+        margin-left: 60px;
+        text-align: center;
+        padding-top: 0px;
     }
 
 }
@@ -207,6 +219,7 @@ html {
 .texto {
     color: #562584;
     font-family: 'Montserrat';
+    font-size: 17px;
 
 }
 
